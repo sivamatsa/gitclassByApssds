@@ -1,0 +1,152 @@
+﻿<!doctype html>
+<html>
+<head
+    <metacharset="UTF-8">
+    <title>Happy Friendship day</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Siva Matsa">
+    <meta name="description" content="with HTML,JS,CSS">
+    <meta name="keywords" content="programming hero, web playground">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon">
+    <!--@bootstrapCss-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!--custom css-->
+    <link rel="stylesheet" href="css/style.css">
+
+</br> 
+</br>
+<br>  </br>
+
+        <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    </head>
+    <body>
+         <h1 class='hfd'>
+            Happy friendship Day
+        </h1>
+        <br>
+        <audio src="https://mobcup.net/d/iwm5g9fn/mp3"  ,"  loop="loop" id="music">
+  </audio>
+        <br>
+        <img src="https://code.sololearn.com/Icons/Avatars//19257472.jpg">
+        <h1 id='name' class='friend'>
+        </h1>
+        <h5>A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</h5>
+    <h4>You are thinking why I wrote alphabets of English???</h4>
+    <strong>I wrote English alpahbets because I can't mention all my friends name in this so i wrote alphabets as every name of a person starts with a alphabet</strong>
+    <h4>I am very happy because you are one of them .  </h4>
+        
+        
+        <br>
+        <h1 id="greet" class='time'></h1>
+        <br>
+        <br>
+        <script>
+        let name;
+        do{
+            name = "Sai Laxmi"
+        }while(name == '' || name == null || name == undefined);
+        document.getElementById("name").innerHTML = name;
+        var countDownDate = new Date("Aug 1, 2020 23:59:59").getTime();
+        var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days= Math.floor(distance / (1000 * 60 * 60 *24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 *24)) / (1000 * 60 *60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+        document.getElementById("greet").innerHTML = days + " days<br>" + hours + " hours<br> " + minutes + " minutes<br> " + seconds + " seconds\n ";
+        }, 1000);
+        
+         var music = document.getElementById("music")
+  music.load();
+  document.addEventListener("click", function() {
+  music.play()
+  })
+        
+        </script>
+      <footer> <marquee > From  Siva Matsa </marquee></footer>
+        
+    </body>
+</html>
+
+<style>
+
+  body {
+    background-image:url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-1.2.1&w=1000&q=80');
+    font-family: 'Berkshire Swash', cursive;
+    text-align:center;
+}
+
+h5{
+    text-align:center;
+    color:blue;
+    animation:hfdanimate 0s infinite;
+    font-size:10px;
+    }
+strong{
+	color:skyblue;
+
+}
+h4{
+color:pink;
+}
+.hfd{
+    font-size:200%;
+    z-index:1;
+    animation:hfdanimate 1s infinite;
+    color:rgba(0,0,0,0);
+}
+
+.friend{
+    font-size:40px;
+    z-index:2;
+    animation:friendanimate 5s infinite;
+    color:#fff;
+    padding-top:40px;
+}
+
+.time{
+    font-size:20px;
+    z-index:-1;
+    animation:timeanimate 1s infinite;
+}
+img{
+    border-radius:100%;
+    border:5px;
+    width:120px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+
+@keyframes hfdanimate{
+    0%{
+        text-shadow:0px -20px #000, 0px 20px #fff;
+    }
+    50%{
+        text-shadow:0px 20px #fff,0px -20px #000;
+    }
+    100%{
+        text-shadow:0px -20px #000, 0px 20px #fff;
+    }
+}
+
+@keyframes friendanimate{
+    0%,100%{
+        margin-left:-30%;
+        text-shadow:10px -5px #f72bed, 20px -10px #432bf7, 30px -15px #2bd2f7, 40px -20px #2bf73c, 50px -25px #f1f72b, 60px -30px #f77a2b;
+        color:#000;
+    }
+    25%,75%{
+        color:#fff;
+    }
+    50%{
+        margin-left:30%;
+        text-shadow:-10px -5px #f72bed, -20px -10px #432bf7, -30px -15px #2bd2f7, -40px -20px #2bf73c, -50px -25px #f1f72b, -60px -30px #f77a2b;
+        color:#000;
+    }
+}
+
+</style>
